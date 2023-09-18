@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Image, Dimensions, ScrollView } from "react-native";
 import topo from "../../../assets/Logo4.png";
 import marguerita from "../../../assets/Pizza-Margherita-1024x685.jpg";
 import quatroQueijos from "../../../assets/4queijos.jpg";
@@ -11,7 +11,7 @@ const width = Dimensions.get("screen").width;
 export default function Carrinho() {
   return (
     <>
-      <View style={styles.bg}>
+      <ScrollView style={styles.bg}>
         <LinearGradient
           style={{
             width: "100%",
@@ -69,7 +69,7 @@ export default function Carrinho() {
 
             <View style={styles.pizzaCard}>
               <View style={styles.pizzaTextos}>
-                <Text style={styles.PizzaNome}>Frango c/ Catupiry</Text>
+                <Text style={styles.PizzaNome}>Frango Catupiry</Text>
                 <View>
                   <Text style={styles.PizzaDescricao}>
                     Mussarela, Frango e Catupiry
@@ -84,7 +84,7 @@ export default function Carrinho() {
             </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 }
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     marginTop: "16.7%",
   },
   fotoPizza: {
-    height: 150,
+    height: 140,
     width: 150,
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
